@@ -10,6 +10,18 @@
     overflow: hidden;
   }
 
+  @media (max-width: theme("screens.lg")) {
+    .component {
+      max-width: theme("maxWidth.md");
+    }
+  }
+
+  @media (min-width: theme("screens.lg")) {
+    .component {
+      max-width: 39rem;
+    }
+  }
+
   .component__intro {
     padding: theme("padding.6");
     padding-bottom: theme("padding.8");
@@ -99,16 +111,20 @@
   .subscription__btn {
     --flow-space: 1.75rem;
     background-image: linear-gradient(white 0%, theme("colors.p-cyan") 100%);
-
     background-size: 0% 100%;
     background-repeat: no-repeat;
-    transition: 0.5s ease-in-out;
+    transition: background-size 0.5s ease-in-out;
+    position: relative;
   }
 
   .subscription__btn:hover,
   .subscription__btn:focus-visible {
     background-size: 100% 100%;
     color: theme("colors.gray.600");
+  }
+
+  .subscription__btn:active {
+    top: .5rem;
   }
 
   .why-us {
