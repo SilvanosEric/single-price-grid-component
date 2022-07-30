@@ -11,35 +11,35 @@
     <title>Single price grid component</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <main>
-      <section class="component">
-        <div class="component__intro">
-          <h1 class="component__title">Join our community</h1>
-          <h2 class="component__subtitle">
+  <body class="text-body font-karla bg-n-light-gray | grid place-items-center min-h-screen py-16">
+    <main class="px-8 ">
+      <section class="component | container mx-auto">
+        <div class="component__intro | flow | bg-white">
+          <h1 class="component__title | text-p-cyan">Join our community</h1>
+          <h2 class="component__subtitle | text-p-bright-yellow">
             30-day, hassle-free money back guarantee
           </h2>
-          <p class="component__copy">
+          <p class="component__copy | text-n-grayish-blue">
             Gain access to our full library of tutorials along with expert code
             reviews. Perfect for any developers who are serious about honing
             their skills.
           </p>
         </div>
 
-        <div class="container">
-          <section class="subscription">
+        <div class="text-white bg-p-cyan">
+          <section class="subscription | flow">
             <h2 class="subscription__title">Monthly Subscription</h2>
-            <div class="container">
+            <div class="price-details">
               <span class="price">$29</span>
               <span class="period">per month</span>
             </div>
             <p class="subscription__copy">
               Full access for less than <span>$1</span> a day
             </p>
-            <button type="button">Sign Up</button>
+            <button class="btn | subscription__btn" type="button">Sign Up</button>
           </section>
 
-          <section class="why-us">
+          <section class="why-us | flow | backdrop-saturate-[.75] backdrop-brightness-110">
             <h2 class="why-us__title">Why Us</h2>
             <ul class="why-us__copy">
               <li class="why-us__copy-item">Tutorials by industry experts</li>

@@ -1,5 +1,106 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,700;1,400&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .component {
+    border-radius: theme("borderRadius.md");
+    overflow: hidden;
+  }
+
+  .component__intro {
+    padding: theme("padding.6");
+    padding-bottom: theme("padding.8");
+  }
+
+  .component__title {
+    font-size: theme("fontSize.xl");
+  }
+
+  .component__subtitle {
+    --flow-space: 1.2rem;
+    font-size: theme("fontSize.base");
+  }
+
+  .component__copy {
+    --flow-space: 1rem;
+    font-size: theme("fontSize.sm");
+    line-height: theme("lineHeight.loose");
+  }
+
+  .subscription {
+    padding: theme("padding.6");
+  }
+
+  .price-details {
+    --flow-space: 0.75rem;
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .price {
+    font-weight: bold;
+    font-size: theme("fontSize.3xl");
+  }
+
+  .period {
+    color: theme("colors.n-light-gray");
+    filter: brightness(85%);
+  }
+
+  .subscription__copy {
+    --flow-space: 0.15rem;
+  }
+
+  .btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-block: theme("padding.3");
+    border-radius: theme("borderRadius.md");
+    background-color: theme("colors.p-bright-yellow");
+    font-weight: bold;
+    filter: drop-shadow(0 0.5rem 0.75rem rgba(0 0 0 / 0.25));
+  }
+
+  .subscription__btn {
+    --flow-space: 1.75rem;
+    background-image: linear-gradient(white 0%, theme("colors.p-cyan") 100%);
+
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    transition: 0.5s ease-in-out;
+  }
+
+  .subscription__btn:hover,
+  .subscription__btn:focus-visible {
+    background-size: 100% 100%;
+    color: theme("colors.gray.600");
+  }
+
+  .why-us {
+    padding: theme("padding.6");
+  }
+
+  .why-us__copy {
+    font-size: theme("fontSize.sm");
+  }
+}
+
+@layer utilities {
+  .flow > :not(:first-child) {
+    margin-top: var(--flow-space, 1.5rem);
+  }
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: theme("fontSize.lg");
+}
