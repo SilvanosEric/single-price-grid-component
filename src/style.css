@@ -16,6 +16,12 @@
     }
   }
 
+  @media (min-width: theme("screens.sm")) and (max-width: theme("screens.lg")) {
+    .component {
+      text-align: center;
+    }
+  }
+
   @media (min-width: theme("screens.lg")) {
     .component {
       max-width: 39rem;
@@ -124,7 +130,7 @@
   }
 
   .subscription__btn:active {
-    top: .5rem;
+    top: 0.5rem;
   }
 
   .why-us {
